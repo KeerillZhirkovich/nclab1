@@ -1,0 +1,1 @@
+CREATE TABLE movie (id int(6) unsigned auto_increment primary key, movie_title varchar(50), inception_year int(4) check (inception_year > 1895), country varchar(50), director varchar(30), genre varchar(30));

@@ -65,7 +65,7 @@ public class MovieDaoImpl implements MovieDao {
   public List<Movie> getMovieList() {
     Session session = sessionFactory.getCurrentSession();
     List<Movie> movieList
-        = (List<Movie>) session.createQuery("from movie").list();
+        = (List<Movie>) session.createQuery("from Movie").list();
 
     for (Movie movie : movieList) {
       logger.info("Movie: " + movie);
