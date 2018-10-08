@@ -3,6 +3,8 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib prefix="from" uri="http://www.springframework.org/tags/form" %>
 <%@ page session="false" %>
+
+
 <html>
 <head>
     <title>Movies</title>
@@ -108,7 +110,7 @@
                 </form:label>
             </td>
             <td>
-                <form:input path="movieTitle"/>
+                <form:input path="movieTitle" required="required" placeholder="Back to the future"/>
             </td>
         </tr>
         <tr>
@@ -118,7 +120,12 @@
                 </form:label>
             </td>
             <td>
-                <form:input path="inceptionYear"/>
+                <script type="text/javascript">
+                    //Скрипт очистки формы
+                    function doClear(inceptionYear) { if (inceptionYear.value == inceptionYear.defaultValue) { inceptionYear.value = "" } }
+                </script>
+                <form:input path="inceptionYear" required="required" type="number" min="1895" max="2018"
+                            onclick="doClear(this)"/> 1895-20xx
             </td>
         </tr>
         <tr>
@@ -128,7 +135,7 @@
                 </form:label>
             </td>
             <td>
-                <form:input path="country"/>
+                <form:input path="country" required="required" placeholder="USA" pattern="[A-Z][A-Za-z' -]+"/>
             </td>
         </tr>
         <tr>
