@@ -16,3 +16,6 @@ target/
 # IDE files #
 *.iml
 .idea/
+
+# Node modules #
+node_modules

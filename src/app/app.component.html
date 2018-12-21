@@ -1,0 +1,25 @@
+<div class="wrapper">
+<div class = "inputField">
+<label for="currentLocation">Текущее местоположение </label> <br/>
+<input name="currentLocation" [(ngModel)]="currentLocation"/>
+</div>
+<div class = "inputField">
+<label for="neededLocation">Желаемое местоположение </label><br/>
+<input name="neededLocation" [(ngModel)]="neededLocation"/>
+</div>
+<div class = "inputField">
+<label for="consumption">Расход вашего автомобиля </label><br/>
+<input type="number" step = "0.1" name="consumption" [(ngModel)]="consumption"/>
+</div>
+<input class = "calcButton" type="button" value="Рассчитать" (click)="calc()" />
+
+<div class="price" *ngIf="tripPrice!=null">
+<label>Стоимость поездки: {{tripPrice}} рублей</label>
+</div>
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+<router-outlet></router-outlet>
+</div>

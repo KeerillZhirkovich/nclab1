@@ -1,0 +1,23 @@
+agm-map {
+  height: 500px;
+  width: 940px;
+  position: absolute;
+  bottom: 0px;
+  right:0px;
+}
+
+.inputField{
+	margin: 0 0 10px 10px;
+}
+
+.calcButton{
+	margin: 0 0 10px 10px;
+}
+
+.price{
+margin-top: 20px;
+}
+
+.wrapper {
+	margin-top: 100px;
+}
