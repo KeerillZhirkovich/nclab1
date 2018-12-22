@@ -1,6 +1,7 @@
+
 agm-map {
-  height: 500px;
-  width: 940px;
+  height: 540px;
+  width: 980px;
   position: absolute;
   bottom: 0px;
   right:0px;
@@ -14,10 +15,22 @@ agm-map {
 	margin: 0 0 10px 10px;
 }
 
-.price{
-margin-top: 20px;
+.searchButton{
+	margin: 0 0 0 5px;
 }
 
-.wrapper {
-	margin-top: 100px;
+.price{
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.inputForm {
+	margin-top: 50px
+}
+
+.inputSearch{
+	position: absolute;
+	bottom:560px;
+	right: 180px;
+	width: 500px;
 }

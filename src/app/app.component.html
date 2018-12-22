@@ -1,11 +1,12 @@
-<div class="wrapper">
+
+<div class="inputForm">
 <div class = "inputField">
 <label for="currentLocation">Текущее местоположение </label> <br/>
-<input name="currentLocation" [(ngModel)]="currentLocation"/>
+<input name="currentLocation" [(ngModel)]="currentLocation" placeholder="Samara"/>
 </div>
 <div class = "inputField">
 <label for="neededLocation">Желаемое местоположение </label><br/>
-<input name="neededLocation" [(ngModel)]="neededLocation"/>
+<input name="neededLocation" [(ngModel)]="neededLocation" placeholder="Moscow"/>
 </div>
 <div class = "inputField">
 <label for="consumption">Расход вашего автомобиля </label><br/>
@@ -16,10 +17,20 @@
 <div class="price" *ngIf="tripPrice!=null">
 <label>Стоимость поездки: {{tripPrice}} рублей</label>
 </div>
+<div  class="inputField" *ngIf="cityCode!=null">
+<a href={{weatherPath}} target="_blank">
+<img src={{weatherImgPath}} border="0" alt="Яндекс.Погода"/><img width="1" height="1" 
+src="https://clck.yandex.ru/click/dtype=stred/pid=7/cid=1227/*https://img.yandex.ru/i/pix.gif" alt="" border="0"/></a>
+</div>
+</div>
+
+<div class = "inputSearch">
+<input name="search" style="width:230px" [(ngModel)]="searchLocation"/>
+<input class = "searchButton" type="button" value="Поиск" (click)="search()" />
+</div>
 
 <agm-map [latitude]="lat" [longitude]="lng">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
 
 <router-outlet></router-outlet>
-</div>
