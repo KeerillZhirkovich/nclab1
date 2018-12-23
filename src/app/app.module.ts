@@ -5,8 +5,8 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AgmCoreModule } from '@agm/core';
+import {HttpClientModule} from "@angular/common/http";
 
-//import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { AgmCoreModule } from '@agm/core';
       apiKey: 'AIzaSyD7kYHwzqUSGOKSoTq13TB8iMhgxpDJXj0'
     }),
 	FormsModule,
-	//HttpClientModule
+	HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

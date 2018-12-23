@@ -1,5 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    // import HttpClientModule after BrowserModule.
+    HttpClientModule,
+  ],
+  declarations: [
+    AppComponent,
+  ],
+  bootstrap: [AppComponent]
+})
 
 @Component({
   selector: 'app-root',
@@ -25,7 +38,7 @@ export class AppComponent implements OnInit {
   searchUrl = '/data/';
   getCodeUrl = '/data/';
 
-  // constructor(private http: HttpClient){}
+  constructor(private http: HttpClient){}
 
   ngOnInit() {
     console.log('cL' + this.currentLocation);
@@ -57,10 +70,7 @@ export class AppComponent implements OnInit {
     });
   }
 }
-
 interface Cords {
   lat: number;
   lng: number;
 }
-
-  
